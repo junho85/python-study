@@ -14,3 +14,9 @@ for line in fhand:
     if line.startswith('Subject:'):
         count = count + 1
 print('There were', count, 'subject lines in', fname)
+
+# fname = input("Enter file name: ")
+fname = "mbox.txt"
+fh = open(fname)
+data = fh.read()
+print(data.upper().strip())
