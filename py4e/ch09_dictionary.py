@@ -1,3 +1,4 @@
+## part 1
 ddd = dict()
 ddd['age'] = 21
 ddd['course'] = 182
@@ -16,3 +17,5 @@ print(lst)
 
 jjj = {'chuck':1, 'fred':42}
 print(jjj)
+
+## part 2
