@@ -13,3 +13,6 @@ lst.append(21)
 lst.append(183)
 print(lst)
 # [21, 183]
+
+jjj = {'chuck':1, 'fred':42}
+print(jjj)
