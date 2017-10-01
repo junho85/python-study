@@ -19,3 +19,11 @@ jjj = {'chuck':1, 'fred':42}
 print(jjj)
 
 ## part 2
+ccc = dict()
+ccc['csev'] = 1
+ccc['cwen'] = 1
+print(ccc)
+
+ccc['cwen'] = ccc['cwen'] + 1
+print(ccc)
+
