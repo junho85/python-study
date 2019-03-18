@@ -4,6 +4,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from PIL import Image
 from io import BytesIO
 
+from datetime import date
+
 driver = None
 try:
     driver = webdriver.Chrome('/Users/junho85/Downloads/chromedriver')
@@ -20,6 +22,9 @@ try:
     png = driver.get_screenshot_as_png()
     img = Image.open(BytesIO(png))
 
-    img.crop((1900, 150, 2300, 550)).save("screenshot.png")
+    today = date.today().strftime('%Y%m%d')
+    filename = today + ' ' + 'github.png'
+
+    img.crop((1900, 150, 2300, 550)).save(filename)
 finally:
     driver.close()
