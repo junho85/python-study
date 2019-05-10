@@ -15,7 +15,7 @@ try:
     last_date_elem = elem.find_element_by_tag_name("svg").find_elements_by_tag_name("rect")[-1]
     location = last_date_elem.location
 
-    driver.set_window_size(1200, 500)
+    driver.set_window_size(1400, 500)
     driver.execute_script("window.scrollBy(0, 800);")
     ActionChains(driver).move_to_element(last_date_elem).perform()
 
@@ -25,6 +25,8 @@ try:
     today = date.today().strftime('%Y%m%d')
     filename = today + ' ' + 'github.png'
 
-    img.crop((1900, 150, 2300, 550)).save(filename)
+    left = 2400
+    top = 100
+    img.crop((left, top, left+350, top+450)).save(filename)
 finally:
     driver.close()
